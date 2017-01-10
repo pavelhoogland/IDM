@@ -1,5 +1,7 @@
 package hibernate;
 
+import java.sql.Array;
+
 public class Actor {
 
     private String fname;
@@ -8,7 +10,30 @@ public class Actor {
     private int gender;
     private int number;
     private int idactors;
-    private String[] aka_names;
+    private Array aka_names;
+
+    public Actor(String fname, String lname, String mname, int gender, int number, int idactors) {
+	this.fname = fname;
+	this.lname = lname;
+	this.mname = mname;
+	this.gender = gender;
+	this.number = number;
+	this.idactors = idactors;
+    }
+
+    public Actor(String fname, String lname, String mname, int gender, int number, int idactors, Array aka_names) {
+	this.fname = fname;
+	this.lname = lname;
+	this.mname = mname;
+	this.gender = gender;
+	this.number = number;
+	this.idactors = idactors;
+	this.aka_names = aka_names;
+    }
+
+    public Actor() {
+
+    }
 
     public String getFname() {
 	return fname;
@@ -58,11 +83,11 @@ public class Actor {
 	this.idactors = idactors;
     }
 
-    public String[] getAka_names() {
+    public Array getAka_names() {
 	return aka_names;
     }
 
-    public void setAka_names(String[] aka_names) {
+    public void setAka_names(Array aka_names) {
 	this.aka_names = aka_names;
     }
 

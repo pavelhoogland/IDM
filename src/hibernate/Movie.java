@@ -1,5 +1,13 @@
 package hibernate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Movie {
 
     private String title;
@@ -8,8 +16,35 @@ public class Movie {
     private int type;
     private String location;
     private String language;
+    @Id
     private int idmovies;
     private String[] aka_titles;
+
+    public Movie(String title, int year, int number, int type, String location, String language, int idmovies) {
+	this.title = title;
+	this.year = year;
+	this.number = number;
+	this.type = type;
+	this.location = location;
+	this.language = language;
+	this.idmovies = idmovies;
+    }
+
+    public Movie(String title, int year, int number, int type, String location, String language, int idmovies,
+	    String[] aka_titles) {
+	this.title = title;
+	this.year = year;
+	this.number = number;
+	this.type = type;
+	this.location = location;
+	this.language = language;
+	this.idmovies = idmovies;
+	this.aka_titles = aka_titles;
+    }
+
+    public Movie() {
+	// TODO Auto-generated constructor stub
+    }
 
     public void setTitle(String title) {
 	this.title = title;

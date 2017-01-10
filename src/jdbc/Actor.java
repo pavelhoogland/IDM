@@ -12,6 +12,15 @@ public class Actor {
     private int idactors;
     private Array aka_names;
 
+    public Actor(String fname, String lname, String mname, int gender, int number, int idactors) {
+	this.fname = fname;
+	this.lname = lname;
+	this.mname = mname;
+	this.gender = gender;
+	this.number = number;
+	this.idactors = idactors;
+    }
+
     public Actor(String fname, String lname, String mname, int gender, int number, int idactors, Array aka_names) {
 	this.fname = fname;
 	this.lname = lname;
@@ -20,6 +29,10 @@ public class Actor {
 	this.number = number;
 	this.idactors = idactors;
 	this.aka_names = aka_names;
+    }
+
+    public Actor() {
+
     }
 
     public String getFname() {

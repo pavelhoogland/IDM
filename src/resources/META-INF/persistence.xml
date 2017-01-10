@@ -1,0 +1,19 @@
+<persistence>
+    <persistence-unit name="IMDB">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        
+        <class>hibernate.Actor</class>
+        <class>hibernate.Movie</class>
+
+        <properties>
+            <property
+            name="javax.persistence.jdbc.driver"
+            value="org.postgresql.Driver" />
+            <property
+            name="javax.persistence.jdbc.url"
+            value="jdbc:postgresql://localhost:5432/IMDB" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="password" />
+        </properties>
+    </persistence-unit>
+</persistence>

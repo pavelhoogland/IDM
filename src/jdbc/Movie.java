@@ -5,6 +5,29 @@ public class Movie {
     private String title;
     private int year;
     private int number;
+
+    public Movie(String title, int year, int number, int type, String location, String language, int idmovies) {
+	this.title = title;
+	this.year = year;
+	this.number = number;
+	this.type = type;
+	this.location = location;
+	this.language = language;
+	this.idmovies = idmovies;
+    }
+
+    public Movie(String title, int year, int number, int type, String location, String language, int idmovies,
+	    String[] aka_titles) {
+	this.title = title;
+	this.year = year;
+	this.number = number;
+	this.type = type;
+	this.location = location;
+	this.language = language;
+	this.idmovies = idmovies;
+	this.aka_titles = aka_titles;
+    }
+
     private int type;
     private String location;
     private String language;
